@@ -1,0 +1,47 @@
+/**
+ * Author: Lakshman Veti
+ * Type: Stylesheet
+ * Objective: Search page related styles
+ * Associated Route/Usage: /search
+*/
+
+.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+}
+.page-item:first-child .page-link {
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+.page-link {
+    padding: .375rem .75rem;
+}
+.page-link {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    color: var(--cui-pagination-color,#321fdb);
+    text-decoration: none;
+    background-color: var(--cui-pagination-bg,#fff);
+    border: 1px solid var(--cui-pagination-border-color,#c4c9d0);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.auto-complete{
+    position: relative;
+}
+.auto-complete .list{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background: white;
+    z-index: 99;
+    height: 200px;
+    overflow: auto;
+}
+.auto-complete .list li{
+    list-style: none;
+    padding: 6px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}

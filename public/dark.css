@@ -1,0 +1,22 @@
+.c-sidebar,.c-header,.card,.card-header,th,.dropdown-item {
+    color: #fff;
+    background: #212121 !important;
+}
+.form-heading, a,.table{
+    color: #fff !important;
+}
+.c-body{
+    background: #ccc !important;
+}
+div.sidebar-main-content ul li:hover, #react-sidebar div.sidebar-header{
+    color: #fff !important;
+    background: #212121 !important;
+}
+#react-sidebar div.sidebar-main{
+    background: #383737 !important;
+    color: #fff !important;
+}
+.c-header .c-subheader{
+    background: #222;
+    border: 0 !important
+}

@@ -1,0 +1,108 @@
+{
+   "graph":[
+      {
+         "label":"Others",
+         "values":[
+            {
+               "x":"Dec 19",
+               "y":10
+            },
+            {
+               "x":"Mar 20",
+               "y":4
+            },
+            {
+               "x":"May 20",
+               "y":3
+            }
+         ]
+      },
+      {
+         "label":"Top",
+         "values":[
+            {
+               "x":"Dec 19",
+               "y":6
+            },
+            {
+               "x":"Mar 20",
+               "y":8
+            },
+            {
+               "x":"May 20",
+               "y":5
+            }
+         ]
+      },
+      {
+         "label":"ClientC",
+         "values":[
+            {
+               "x":"Dec 19",
+               "y":6
+            },
+            {
+               "x":"Mar 20",
+               "y":8
+            },
+            {
+               "x":"May 20",
+               "y":5
+            }
+         ]
+      }
+   ],
+   "legends":{
+      "Others":{
+         "color":"#ff7f0e",
+         "data":[
+            {
+               "month":"Dec 19",
+               "value":234
+            },
+            {
+               "month":"Mar 20",
+               "value":555
+            },
+            {
+               "month":"May 20",
+               "value":244
+            }
+         ]
+      },
+      "Top":{
+         "color":"#ffbb78",
+         "data":[
+            {
+               "month":"Dec 19",
+               "value":234
+            },
+            {
+               "month":"Mar 20",
+               "value":555
+            },
+            {
+               "month":"May 20",
+               "value":244
+            }
+         ]
+      },
+      "ClientC":{
+         "color":"#2ca02c",
+         "data":[
+            {
+               "month":"Dec 19",
+               "value":234
+            },
+            {
+               "month":"Mar 20",
+               "value":555
+            },
+            {
+               "month":"May 20",
+               "value":244
+            }
+         ]
+      }
+   }
+}

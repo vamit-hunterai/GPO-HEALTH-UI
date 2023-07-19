@@ -1,0 +1,35 @@
+.progressVisualFull {
+    display: flex;
+    /* change the value if you want different thickness */
+    height: 16px;
+    margin: 20px 14px;
+    width: 100%;
+    background-color: #ccc !important;
+    overflow: hidden;
+  }
+  
+  .progressVisualPart {
+    /* Number of the seconds for complete animation */
+    transition: width 2s;
+    height: 16px;
+  }
+  
+  
+  .progressLabel {
+    /* Nothing here, move along */
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .progress-wrapper{
+    width: 100%;
+    position: relative;
+  }
+  .progress-wrapper .label{
+    display: flex;
+    justify-content: center;
+    font-size: 11px;
+    position: absolute;
+    top: 0;
+    color:white;
+    align-items: center;
+  }
