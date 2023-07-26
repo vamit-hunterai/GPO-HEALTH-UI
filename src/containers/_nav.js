@@ -14,7 +14,7 @@ function changeTheme(theme){
 }
 */
 
-const _nav =  [
+const _nav = [
   {
     _tag: 'CSidebarNavItem',
     name: 'Upload',
@@ -58,13 +58,17 @@ const _nav =  [
         to: '/'
       }
     ],
-  }
-  ,
+  },
   {
     _tag: 'CSidebarNavItem',
-      name: 'Dashboard',
-      to: '/dashboard',
-      icon: 'cil-speedometer',
+    name: 'Dashboard',
+    to: '/dashboard',
+    icon: 'cil-speedometer',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'API Admin',
+    to: 'https://devapi.hunterai.com'
   }
   // {
   //   _tag: 'CSidebarNavDropdown',
