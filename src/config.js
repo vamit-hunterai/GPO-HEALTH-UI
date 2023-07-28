@@ -13,7 +13,7 @@ var configuration = {
         node: 'https://ca.gpo-health.com/api/v1',
     },
     "filesAutoRefresh": 5000, //ms
-    "authType": "ads", //rest
+    "authType": "rest", //ads
     "snapshot": {
     },
     allowedExt: ['csv','tab','rtf','ods ','html','htm','xml','jp2','tiff','gif','png','jpg','jpeg','txt','doc','docx', 'xls', 'xlsx','pdf','ppt','pptx','frm', 'myd','mdb','accdb'],
