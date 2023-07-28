@@ -68,7 +68,8 @@ const _nav = [
   {
     _tag: 'CSidebarNavItem',
     name: 'API Admin',
-    to: 'https://devapi.hunterai.com'
+    href: 'https://devapi.hunterai.com'
+    target: '_blank'
   }
   // {
   //   _tag: 'CSidebarNavDropdown',
