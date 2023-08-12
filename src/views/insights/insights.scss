@@ -1,11 +1,12 @@
-.tabs{
-    position:fixed;
-    bottom:49px;
+.tabs {
+    position: fixed;
+    bottom: 49px;
     width: 100%;
     display: flex;
     margin: 0;
     padding: 0;
-    li{
+
+    li {
         list-style: none;
         display: -webkit-flex;
         display: flex;
@@ -19,56 +20,67 @@
         align-items: center;
     }
 }
-.insight-headers{
+
+.insight-headers {
     margin: 20px 0;
     font-size: 18px;
     align-items: center;
-    svg{
+
+    svg {
         width: 1.5rem !important;
         height: 1.5rem !important;
         font-size: 18px !important;
     }
 
-    
+
 }
-.insights{
-    .aggregates{
-        padding: 0; margin: 10px;
+
+.insights {
+    .aggregates {
+        padding: 0;
+        margin: 10px;
         margin-top: 0px;
         width: 100%;
-        li{
+
+        li {
             list-style: none;
             display: flex;
             justify-content: center;
-            span{
-                display:flex;
+
+            span {
+                display: flex;
                 flex: 1;
-                &.dot{
-                    flex:.2;
-                    i{
-                    margin-top: 5px;
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 50%;
-                    background-color: #ccc;
+
+                &.dot {
+                    flex: .2;
+
+                    i {
+                        margin-top: 5px;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: #ccc;
                     }
                 }
             }
         }
     }
-    .nav-tabs{
+
+    .nav-tabs {
+
         // padding: 0 12px;
-        .nav-link{
-            color:#333;
+        .nav-link {
+            color: #333;
             margin: 0 10px;
         }
-    } 
+    }
 
-    .tile-root{
+    .tile-root {
         display: block;
         padding: 10px;
         position: relative;
-        .tile{
+
+        .tile {
             width: 200px;
             height: 150px;
             float: left;
@@ -77,31 +89,37 @@
             position: relative;
             background: #fff;
             box-shadow: 0 0 8px #ccc;
-            h2{
+
+            h2 {
                 color: #568aaf;
             }
-            &::before{
+
+            &::before {
                 content: " ";
                 position: absolute;
-                top:0;
+                top: 0;
                 left: 0;
                 width: 4px;
                 height: 100%;
                 background-color: #568aaf;
             }
 
-            &.normal{
-                h2{
+            &.normal {
+                h2 {
                     color: #3d9c89;
                 }
-                &::before{
+
+                &::before {
                     background-color: #3d9c89;
                 }
             }
 
-            &.moderate{
-                h2{color:#f9931d}
-                &::before{
+            &.moderate {
+                h2 {
+                    color: #f9931d
+                }
+
+                &::before {
                     background-color: #f9931d;
                 }
             }
