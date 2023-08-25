@@ -7,13 +7,14 @@
 
 var configuration = {
     "appName": "GPO-Health-ReactUI",
+    "redirectURL": "https://ca.gpo-health.com/?redirect=true",
     "apiUrl": {
         // node: '/api/v1', 
         // node: 'http://18.207.124.230:3000/api/v1',
         node: 'https://ca.gpo-health.com/api/v1',
     },
     "filesAutoRefresh": 5000, //ms
-    "authType": "rest", //ads
+    "authType": "oauth2", //ads, rest
     "snapshot": {
     },
     allowedExt: ['csv','tab','rtf','ods ','html','htm','xml','jp2','tiff','gif','png','jpg','jpeg','txt','doc','docx', 'xls', 'xlsx','pdf','ppt','pptx','frm', 'myd','mdb','accdb'],

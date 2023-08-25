@@ -29,7 +29,17 @@ $base-white: #fff;
 .modal {
     z-index: 100000
 }
-
+.login-btn {
+    height: 40px;
+    width: 100%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #fff;
+    background-color: #E21932;
+    border-color: #E21932;
+    text-transform: uppercase;
+}
 .login {
     transition: visibility 1s, opacity 0.5s linear;
 
@@ -560,9 +570,9 @@ label .imp {
 }
 
 .login-logo {
-    width: 50%;
-    float: right;
-    margin: -32px -28px;
+    /*width: 100%;
+    float: right;*/
+    margin: 32px 0px;
 }
 
 .zoom-controls {

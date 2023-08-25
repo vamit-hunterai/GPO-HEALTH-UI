@@ -36,11 +36,11 @@ export default authService;
    * @password : string
    * @remeber  : boolean
 */
-function login(username, password, remember) {
+function login(credentials, remember) {
     return commonService.restCall({
         url: `${config.apiUrl.node}/user/login`,
         method:'POST',
-        data:{username,password, authType:config.authType}
+        data:{...credentials, authType:config.authType}
     });
 }
 
