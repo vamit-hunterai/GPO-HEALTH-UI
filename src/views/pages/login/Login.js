@@ -172,7 +172,7 @@ class Login extends React.Component {
                           responseType="code"
                           clientId="c51c7675-0d50-4371-ae35-86e610d4f72d"
                           redirectUri={config.redirectURL}
-                          scope='User.Read offline_access email openid profile api://86aa0a64-824c-4743-899e-51d006c666fd/AccessAPI api://e8d3f1dc-f415-4d19-af55-7397008c63b0/AccessAPP'
+                          scope='offline_access email openid profile api://e8d3f1dc-f415-4d19-af55-7397008c63b0/AccessAPP'
                           onSuccess={this.onLoginSuccess}
                           onFailure={this.onLoginFailure} />
                       </StrictMode>
