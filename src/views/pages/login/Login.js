@@ -170,9 +170,9 @@ class Login extends React.Component {
                           className='login-btn'
                           authorizationUrl="https://login.microsoftonline.com/1685ee7a-5191-4b15-b097-af0b89a8832c/oauth2/v2.0/authorize"
                           responseType="code"
-                          clientId="4858d08e-c3be-4606-bb4f-669fcae5ed33"
+                          clientId="c51c7675-0d50-4371-ae35-86e610d4f72d"
                           redirectUri={config.redirectURL}
-                          scope='email+openid+profile'
+                          scope='User.Read offline_access profile api://86aa0a64-824c-4743-899e-51d006c666fd/AccessAPI api://e8d3f1dc-f415-4d19-af55-7397008c63b0/AccessAPP'
                           onSuccess={this.onLoginSuccess}
                           onFailure={this.onLoginFailure} />
                       </StrictMode>

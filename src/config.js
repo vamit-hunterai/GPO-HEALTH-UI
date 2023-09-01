@@ -7,7 +7,7 @@
 
 var configuration = {
     "appName": "GPO-Health-ReactUI",
-    "redirectURL": "https://ca.gpo-health.com/?redirect=true",
+    "redirectURL": "https://ca.gpo-health.com/?authredirect=true",
     "apiUrl": {
         // node: '/api/v1', 
         // node: 'http://18.207.124.230:3000/api/v1',
