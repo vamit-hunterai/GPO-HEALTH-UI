@@ -30,7 +30,7 @@ import CIcon from '@coreui/icons-react'
 import { 
   TheHeaderDropdown,
 }  from './index'
-import { zIndex } from 'material-ui/styles';
+import { zIndex } from '@mui/styles';
 
 const TheHeader = () => {
   const dispatch = useDispatch()

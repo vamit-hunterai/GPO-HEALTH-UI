@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useRef } from 'react';
 import { CButton} from '@coreui/react'
-import Paper from '@material-ui/core/Paper';
+import Paper from '@mui/material/Paper';
 import CIcon from '@coreui/icons-react';
 import { EditingState, SortingState, IntegratedSorting ,
     PagingState,
