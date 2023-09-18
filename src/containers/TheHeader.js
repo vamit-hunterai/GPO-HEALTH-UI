@@ -121,7 +121,7 @@ const TheHeader = () => {
           display:'block',
           width: '300px',
         }}
-        inputProps={{placeholder:"search customer"}}
+        inputProps={{placeholder:"Search Customer"}}
       />
     }
         {/* <CHeaderNavItem  className="px-3">
