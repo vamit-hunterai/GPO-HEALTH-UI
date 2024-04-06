@@ -68,19 +68,19 @@ const _nav = [
       {
         _tag: 'CSidebarNavItem',
         name: 'F&B',
-        href: 'https://app.powerbi.com/reportEmbed?reportId=84687048-4007-4e83-a84d-5b428a0e2e82&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
+        href: 'https://app.powerbi.com/reportEmbed?reportId=2952484e-de7d-4003-bf5c-d0f4fefe87e7&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
         target: '_blank'
       },
       {
         _tag: 'CSidebarNavItem',
         name: 'IT',
-        href: 'https://app.powerbi.com/reportEmbed?reportId=d54d6457-7eee-4161-91d3-785cc993c9ae&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
+        href: 'https://app.powerbi.com/reportEmbed?reportId=7b442a6b-77f2-4469-a1d4-6c7d5b3751a7&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
         target: '_blank'
       },
       {
         _tag: 'CSidebarNavItem',
         name: 'Medical equipment',
-        href: 'https://app.powerbi.com/reportEmbed?reportId=a9712282-ea35-47b7-95c9-da5796820b0f&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
+        href: 'https://app.powerbi.com/reportEmbed?reportId=11c9a0aa-b423-4f50-9cf2-dc2a181a3c1e&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
         target: '_blank'
       }
     ]
