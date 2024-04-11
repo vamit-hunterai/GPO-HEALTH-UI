@@ -70,11 +70,12 @@ class Report extends React.Component {
                     window.report = embeddedReport;
                 }}
             />*/
-            <div>
+            /*<div>
                 <CLink href="https://app.powerbi.com/reportEmbed?reportId=84687048-4007-4e83-a84d-5b428a0e2e82&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c" target='_blank'>Workspace: F&B</CLink><br/>
                 <CLink href="https://app.powerbi.com/reportEmbed?reportId=d54d6457-7eee-4161-91d3-785cc993c9ae&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c" target='_blank'>Workspace: IT</CLink><br/>
                 <CLink href="https://app.powerbi.com/reportEmbed?reportId=a9712282-ea35-47b7-95c9-da5796820b0f&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c" target='_blank'>Workspace: Medical equipment</CLink>
-            </div>
+            </div>*/
+            <></>
         );
     }
 }

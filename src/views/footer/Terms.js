@@ -15,7 +15,7 @@ const Terms = () => {
                 <div className="center-block">
                     <div className="logo">
                     <a href="/#">
-                        <img src="logo-full.png" alt="gpo-health" />
+                        <img src="logo-full.png" alt="hunter-ai" />
                     </a>
                     </div>
                 </div>
@@ -106,7 +106,7 @@ controlled, maintained, owned and operated by Gpo-health, Inc.
                 </div>
                 <footer id="footer" style={{ marginLeft: '0px', position: 'fixed' }}>
                     <div className="center-block">
-                        <p className="copyright">© GPO Health 2021</p>
+                        <p className="copyright">© HunterAI 2024</p>
                     </div>
                 </footer>
         </div>

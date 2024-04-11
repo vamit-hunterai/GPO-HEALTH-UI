@@ -13,8 +13,8 @@ const TheFooter = () => {
   return (
     <CFooter fixed={false}>
       <div>
-        <a href="https://www.gpo-health.com/" target="_blank" rel="noopener noreferrer">GPO-HEALTH</a>
-        <span className="ml-1">&copy; 2021 all rights reserved.</span>
+        <a href="https://www.hunterai.com/" target="_blank" rel="noopener noreferrer">HunterAI</a>
+        <span className="ml-1">&copy; 2024 all rights reserved.</span>
       </div>
     </CFooter>
   )

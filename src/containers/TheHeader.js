@@ -62,6 +62,11 @@ const TheHeader = () => {
     .catch(err => {
       console.log(err);
       
+    }).finally(()=>{
+      if(customers.length > 0){
+        let defaultCustomer = customers[0];
+        selectCustomer(defaultCustomer);
+      }
     });
   }
 

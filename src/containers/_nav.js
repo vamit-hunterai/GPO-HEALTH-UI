@@ -66,30 +66,47 @@ const _nav = [
     icon: 'cil-speedometer',
     _children: [
       {
-        _tag: 'CSidebarNavItem',
-        name: 'F&B',
-        href: 'https://app.powerbi.com/reportEmbed?reportId=2952484e-de7d-4003-bf5c-d0f4fefe87e7&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
-        target: '_blank'
+        _tag: 'CSidebarNavDropdown',
+        name: 'Client04',
+        _children: [
+          {
+            _tag: 'CSidebarNavItem',
+            name: 'ABG',
+            href: 'https://app.powerbi.com/reportEmbed?reportId=ebeb553e-f48e-464c-bac2-86d6ffdd009d&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
+            target: '_blank'
+          },
+          {
+            _tag: 'CSidebarNavItem',
+            name: 'Hunterai_Product',
+            href: 'https://app.powerbi.com/reportEmbed?reportId=99c5bd24-dc18-4e78-8622-202ec8bcf2e2&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
+            target: '_blank'
+          },
+          {
+            _tag: 'CSidebarNavItem',
+            name: 'R-III',
+            href: 'https://app.powerbi.com/reportEmbed?reportId=6b7d9dcc-4b50-4ff0-a16c-f83bd29acef4&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
+            target: '_blank'
+          }
+        ]
       },
       {
-        _tag: 'CSidebarNavItem',
+        _tag: 'CSidebarNavDropdown',
         name: 'IT',
-        href: 'https://app.powerbi.com/reportEmbed?reportId=7b442a6b-77f2-4469-a1d4-6c7d5b3751a7&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
-        target: '_blank'
-      },
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Medical equipment',
-        href: 'https://app.powerbi.com/reportEmbed?reportId=11c9a0aa-b423-4f50-9cf2-dc2a181a3c1e&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
-        target: '_blank'
+        _children: [
+          {
+            _tag: 'CSidebarNavItem',
+            name: 'Report01',
+            href: 'https://app.powerbi.com/reportEmbed?reportId=2952484e-de7d-4003-bf5c-d0f4fefe87e7&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
+            target: '_blank'
+          }
+        ]
       }
     ]
   },
   {
     _tag: 'CSidebarNavItem',
     name: 'API Admin',
-    href: 'https://devapi.hunterai.com',
-    target: '_blank'
+    href: '#'
   }
   // {
   //   _tag: 'CSidebarNavDropdown',
