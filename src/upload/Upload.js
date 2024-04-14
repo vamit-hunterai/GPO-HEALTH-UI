@@ -38,7 +38,7 @@ class Upload extends Component {
       folders:[],
       selectedFoder:{},
       uploadedFiles:[],
-      uploading: false,
+      uploading: true,
       loading: false,
       uploadProgress: {},
       successfullUploaded: false,
@@ -62,7 +62,14 @@ class Upload extends Component {
 
   
 handleChange (option,obj){
-  this.state["selectedFoder"] = option;
+  if(option != null){
+    this.setState({selectedFoder:option});
+    this.setState({uploading:false});
+  }else{
+    this.setState({selectedFoder:{}});
+    this.setState({uploading:true});
+  }
+  
 }
 
   getCustomerFilders(){
@@ -367,6 +374,7 @@ handleChange (option,obj){
                    <div>
                     <Select
                     name="search.folder"
+                    placeholder="Select folder for uploading files ..."
                     isClearable={true}
                     components={animatedComponents}
                     value={this.selectedFoder}

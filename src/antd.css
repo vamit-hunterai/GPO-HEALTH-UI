@@ -20975,4 +20975,7 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
   }
 }
 
+.c-sidebar-nav-dropdown > ul{
+  padding-left: 10px;
+}
 /*# sourceMappingURL=antd.css.map*/

@@ -17,6 +17,12 @@ function changeTheme(theme){
 const _nav = [
   {
     _tag: 'CSidebarNavItem',
+    name: 'Home',
+    to: '/',
+    icon: 'cil-home',
+  },
+  {
+    _tag: 'CSidebarNavItem',
     name: 'Upload',
     to: '/upload',
     icon: 'cil-cloud-upload',
@@ -67,7 +73,7 @@ const _nav = [
     _children: [
       {
         _tag: 'CSidebarNavDropdown',
-        name: 'Client04',
+        name: 'Client05',
         _children: [
           {
             _tag: 'CSidebarNavItem',
@@ -106,7 +112,8 @@ const _nav = [
   {
     _tag: 'CSidebarNavItem',
     name: 'API Admin',
-    href: '#'
+    href: '#',
+    icon: 'cil-settings'
   }
   // {
   //   _tag: 'CSidebarNavDropdown',

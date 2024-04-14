@@ -80,7 +80,7 @@ class Login extends React.Component {
           if (user && user.username) {
             localStorage.setItem('user', JSON.stringify(user));
             setTimeout(() => {
-              window.location = "#/insights/po-details";
+              window.location = "#/";
               window.userDetails = user;
               // const { from } = it.props.location.state || { from: { pathname: "/insights/po-details" } };
               // it.props.history.push(from);
@@ -229,11 +229,11 @@ class Login extends React.Component {
             </CCol>
           </CRow>
           <div className="d-flex justify-content-center bd-highlight mb-3 footer">
-            <div className=" bd-highlight">&copy; GPO Health 2021 <span className="ruler">|</span></div>
+            <div className=" bd-highlight">&copy; HunterAI 2024 <span className="ruler">|</span></div>
             <div className="bd-highlight"><CLink to="/terms" target="_blank">Terms & Conditions</CLink> <span className="ruler">|</span></div>
             <div className=" bd-highlight"><CLink to="/privacy" target="_blank">Privacy</CLink> <span className="ruler">|</span></div>
             <div className=" bd-highlight"><CLink to="/browser-support" target="_blank">Browser Support</CLink> <span className="ruler">|</span></div>
-            <div className=" bd-highlight"><a href="mailto:support@gpo-health.com">Help : support@gpo-health.com</a></div>
+            <div className=" bd-highlight"><a href="mailto:support@gpo-health.com">Help : support@huneterai.com</a></div>
           </div>
         </CContainer>
       </div>

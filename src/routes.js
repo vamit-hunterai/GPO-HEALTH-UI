@@ -16,7 +16,7 @@ const SearchSow = React.lazy(() => import('./views/search/SearchSow'));
 //const Page401 = React.lazy(() => import("./views/pages/errors/Page404"));
 
 const routes = [
-  { path: '/', exact: true, name: 'Home',component: Upload },
+  { path: '/', exact: true, name: 'Home',component: Insights },
   { path: '/insights/:segment', exact: true, name: 'Insights',component: Insights },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/upload', name: 'Upload', component: Upload },
