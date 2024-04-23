@@ -77,20 +77,26 @@ const _nav = [
         _children: [
           {
             _tag: 'CSidebarNavItem',
-            name: 'ABG',
-            href: 'https://app.powerbi.com/reportEmbed?reportId=ebeb553e-f48e-464c-bac2-86d6ffdd009d&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
+            name: 'CA&A',
+            href: 'https://app.powerbi.com/reportEmbed?reportId=2a7ff9aa-3d48-4362-8fdc-cfe99094f97c&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
             target: '_blank'
           },
           {
             _tag: 'CSidebarNavItem',
-            name: 'Hunterai_Product',
-            href: 'https://app.powerbi.com/reportEmbed?reportId=99c5bd24-dc18-4e78-8622-202ec8bcf2e2&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
+            name: 'OCR_IT',
+            href: 'https://app.powerbi.com/reportEmbed?reportId=0b3e38e2-1400-4160-bdcc-d6400f1b7e0e&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
+            target: '_blank'
+          },
+          {
+            _tag: 'CSidebarNavItem',
+            name: 'OCR_Legal',
+            href: 'https://app.powerbi.com/reportEmbed?reportId=469c665d-5135-4426-99b3-d5f8c99efa9b&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
             target: '_blank'
           },
           {
             _tag: 'CSidebarNavItem',
             name: 'R-III',
-            href: 'https://app.powerbi.com/reportEmbed?reportId=6b7d9dcc-4b50-4ff0-a16c-f83bd29acef4&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
+            href: 'https://app.powerbi.com/reportEmbed?reportId=ac74dd3e-608b-4524-932c-fd68d8978d98&autoAuth=true&ctid=1685ee7a-5191-4b15-b097-af0b89a8832c',
             target: '_blank'
           }
         ]
