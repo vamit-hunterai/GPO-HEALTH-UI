@@ -397,7 +397,7 @@ const Insights = () => {
                 AP Spend
               </CNavLink>
             </CNavItem>
-            <CNavItem>
+            {/*<CNavItem>
               <CNavLink
                 href="javascript:void(0);"
                 active={activeKey === 4}
@@ -414,7 +414,7 @@ const Insights = () => {
               >
                 Data Quality
               </CNavLink>
-            </CNavItem>
+              </CNavItem>*/}
             {/* <CNavItem>
           <CNavLink
             href="javascript:void(0);"
