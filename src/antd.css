@@ -516,12 +516,12 @@ mark {
 .anticon-up:before {
   content: "\E61E";
 }
-.anticon-right:before {
+/*.anticon-right:before {
   content: "\E61F";
-}
-.anticon-left:before {
+}*/
+/*.anticon-left:before {
   content: "\E620";
-}
+}*/
 .anticon-minus-square-o:before {
   content: "\E621";
 }
@@ -15490,14 +15490,14 @@ textarea.ant-input-number {
   border-color: #1890ff;
   color: #1890ff;
 }
-.ant-pagination-prev .ant-pagination-item-link:after {
+/*.ant-pagination-prev .ant-pagination-item-link:after {
   content: "\E620";
   display: block;
-}
-.ant-pagination-next .ant-pagination-item-link:after {
+}*/
+/*.ant-pagination-next .ant-pagination-item-link:after {
   content: "\E61F";
   display: block;
-}
+}*/
 .ant-pagination-disabled,
 .ant-pagination-disabled:hover,
 .ant-pagination-disabled:focus {
