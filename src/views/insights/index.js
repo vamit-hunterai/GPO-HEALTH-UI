@@ -290,8 +290,9 @@ const Insights = () => {
       {customers && customers.length > 0 &&
         <CContainer fluid={true} className="insights">
           <CRow>
-            <CCol ><h2>HunterAI Insights</h2></CCol>
-            <CCol>
+            <CCol lg="6"><h2>HunterAI Insights</h2></CCol>            
+            <CCol lg="3"></CCol>
+            <CCol lg="3">
               <Select
                 name="search.customer"
                 placeholder="Select Customer..."
@@ -301,8 +302,6 @@ const Insights = () => {
                 onChange={(val, obj) => selectCustomer(val, obj)}
                 className={"customer-selection"}
                 options={customers} />
-
-
             </CCol>
           </CRow>
           <CRow className="insight-headers">
