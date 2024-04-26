@@ -18613,8 +18613,8 @@ a.ant-notification-notice-close:focus {
 }
 .ant-table-thead > tr > th,
 .ant-table-tbody > tr > td {
-  padding: 16px 16px;
-  word-break: break-all;
+  padding: 10px 10px;
+  word-break: keep-all;
 }
 .ant-table-thead > tr > th.ant-table-selection-column-custom {
   padding-left: 16px;

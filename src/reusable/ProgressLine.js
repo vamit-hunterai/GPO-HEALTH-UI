@@ -51,7 +51,7 @@ const ProgressLine = ({
           return (
             <div className="progress-wrapper" style={{
                 width: widths[index]
-              }}>
+              }}  >
             <div
               // There won't be additional changes in the array so the index can be used
               /* eslint-disable-next-line react/no-array-index-key */
@@ -63,7 +63,7 @@ const ProgressLine = ({
               }}
               className="progressVisualPart"
             />
-            {item.label && <span className="label"  style={{
+            {item.label && <span className="label" title={item.label} style={{
                 width: '100%'
               }}>{item.label}</span>}
             </div>
