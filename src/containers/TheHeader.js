@@ -61,7 +61,7 @@ const TheHeader = () => {
         className="ml-3 d-md-down-none"
         onClick={toggleSidebar}
       />
-          <img src="logo-full-black.png" alt="logo" className="mx-auto d-lg-none"/>
+          <img src="logo.svg" alt="logo" className="mx-auto d-lg-none"/>
       <CHeaderNav className="d-md-down-none mr-auto" style={{flex:1}}>     
         
 

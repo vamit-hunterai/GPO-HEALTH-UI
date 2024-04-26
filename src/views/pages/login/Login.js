@@ -161,7 +161,7 @@ class Login extends React.Component {
                 <CCard className="p-4 no-radius box-shadow">
                   <CCardBody>
                     <CRow className="justify-content-center">
-                      <img src="logo-full-black.png" className="login-logo" />
+                      <img src="logo.svg" className="login-logo" />
                     </CRow>
                     <CRow>
                       <StrictMode>

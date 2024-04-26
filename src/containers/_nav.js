@@ -27,7 +27,7 @@ const _nav = [
     to: '/upload',
     icon: 'cil-cloud-upload',
   },
-  {
+  /*{
     _tag: 'CSidebarNavDropdown',
     name: 'Search',
     route: '/search',
@@ -64,7 +64,7 @@ const _nav = [
         to: '/'
       }
     ],
-  },
+  },*/
   {
     _tag: 'CSidebarNavDropdown',
     name: 'Dashboard',
@@ -101,7 +101,7 @@ const _nav = [
           }
         ]
       },
-      {
+      /*{
         _tag: 'CSidebarNavDropdown',
         name: 'IT',
         _children: [
@@ -112,15 +112,15 @@ const _nav = [
             target: '_blank'
           }
         ]
-      }
+      }*/
     ]
   },
-  {
+  /*{
     _tag: 'CSidebarNavItem',
     name: 'API Admin',
     href: '#',
     icon: 'cil-settings'
-  }
+  }*/
   // {
   //   _tag: 'CSidebarNavDropdown',
   //   name: 'Theme',

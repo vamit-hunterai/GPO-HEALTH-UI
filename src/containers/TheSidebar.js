@@ -32,7 +32,7 @@ const TheSidebar = () => {
       onShowChange={(val) => dispatch({type: 'set', sidebarShow: val })}
     >
       <CSidebarBrand className="d-md-down-none" to="/upload">
-        <img src="logo-full.png" alt="logo" className="c-sidebar-brand-full" style={{width:'90%'}}/>
+        <img src="logo.svg" alt="logo" className="c-sidebar-brand-full" style={{width:'90%'}}/>
         <img src="logo-min.png" alt="logo" className="c-sidebar-brand-minimized" style={{width:'70%'}}/>
       </CSidebarBrand>
       <CSidebarNav>
