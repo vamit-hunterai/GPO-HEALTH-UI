@@ -285,7 +285,10 @@ handleSubmit(e){
         delete tmpData[key];
   }
   tmpData.type = this.state.segment;
-  tmpData.customer = localStorage.getItem('selectedCustomer');
+
+  let selectedCustomer = localStorage.getItem('selectedCustomer');
+
+  tmpData.customer = ((selectedCustomer)?JSON.parse(selectedCustomer).value:null);
   console.log(tmpData);
   this.search('list', tmpData);
 }

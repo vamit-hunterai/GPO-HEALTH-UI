@@ -73,7 +73,10 @@ handleChange (option,obj){
 }
 
   getCustomerFilders(){
-    searchService.search({type:'customer-folders', customer:localStorage.getItem('selectedCustomer')}).then(res => {
+
+    let selectedCustomer = localStorage.getItem('selectedCustomer');
+
+    searchService.search({type:'customer-folders', customer:((selectedCustomer)?JSON.parse(selectedCustomer).value:null)}).then(res => {
       if(res && res.length>0){
         const _options = [];
         res.forEach(element => {
@@ -431,13 +434,12 @@ handleChange (option,obj){
                               >
                                 <CIcon name="cil-cloud-download" />
                               </CButton>
-
-                              <CButton size="sm"
+                              {/*<CButton size="sm"
                                 color="danger"
                                 onClick={() => { this.deleteFile(item) }}
                               >
                                 <CIcon name="cil-x" />
-                              </CButton>
+                              </CButton>*/}
                             </td>
                           )
                         }

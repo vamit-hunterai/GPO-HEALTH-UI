@@ -12,7 +12,7 @@ import {
   CContainer, CRow, CCol, CNav, CNavItem, CNavLink, CTabContent, CTabPane
 } from '@coreui/react'
 
-import { FaFileInvoiceDollar, FaDollarSign, FaFilePowerpoint, FaDatabase } from "react-icons/fa";
+import { FaFileInvoiceDollar, FaDollarSign, FaFilePowerpoint, FaDatabase, FaCircle } from "react-icons/fa";
 import ProgressLine from "../../reusable/ProgressLine"
 import Search from "../search/search"
 import Loader from "../../containers/Loader";
@@ -148,7 +148,7 @@ const Insights = () => {
   const [customers, setCustomers] = useState([]);
 
   useEffect(() => {
-    
+
 
     getInsights();
     fetchCustomers();
@@ -157,10 +157,10 @@ const Insights = () => {
   const setLastSelectedCustomer = () => {
     let custName = localStorage.getItem("selectedCustomer");
     let custKey = localStorage.getItem("selectedCustomerKey")
-    
-    if(custName && custKey){
 
-      
+    if (custName && custKey) {
+
+
     }
   }
 
@@ -205,11 +205,12 @@ const Insights = () => {
   }
 
   const getColor = (val) => {
-    val = Number(val);
+    return "#3c4b64";
+    /*val = Number(val);
     if (val <= 30) return "#2eb85c";
     else if (val <= 60) return "#f14d45";
     else if (val <= 80) return "#02b7c5";
-    else return "#f9931d"
+    else return "#f9931d"*/
   }
 
   const getInsights = () => {
@@ -218,7 +219,7 @@ const Insights = () => {
     setInsightLoader(true);
     let cust = JSON.parse(localStorage.getItem('selectedCustomer'));
 
-    if(cust != null ){
+    if (cust != null) {
       searchService.search({ type: 'insights', customer: cust.value }).then(res => {
 
         if (res && res.length > 0) {
@@ -227,30 +228,30 @@ const Insights = () => {
           } catch (e) {
             console.log(e)
           }
-  
+
           res.forEach(main => {
             if (main && main.length > 0) {
               if (main[0].source_type)
                 _insightData.push({ title: dataMap[main[0].source_type], data: getRowData(dataAggregates[main[0].source_type], main) })
-  
+
               // try{
               // overViews.push(getRowData(dataOverviewMap, main)[0])
               // }catch(e){}
             }
           });
         }
-  
+
         setInsightOverViewData(getRowData(dataOverviewMap, overViews));
         setInsightData([..._insightData]);
         setInsightLoader(false)
       })
-    }else{
+    } else {
       setInsightOverViewData(getRowData(dataOverviewMap, overViews));
-        setInsightData([..._insightData]);
-        setInsightLoader(false)
+      setInsightData([..._insightData]);
+      setInsightLoader(false)
     }
 
-    
+
   }
 
   const getDataQuality = () => {
@@ -290,7 +291,7 @@ const Insights = () => {
       {customers && customers.length > 0 &&
         <CContainer fluid={true} className="insights">
           <CRow>
-            <CCol lg="6"><h2>HunterAI Insights</h2></CCol>            
+            <CCol lg="6"><h2>HunterAI Insights</h2></CCol>
             <CCol lg="3"></CCol>
             <CCol lg="3">
               <Select
@@ -314,7 +315,7 @@ const Insights = () => {
             <CCol md="3">
               <CRow>
                 <CCol sm="1"><FaFilePowerpoint /></CCol>
-                <CCol> Purchase Orders</CCol>
+                <CCol>Purchase Orders</CCol>
               </CRow>
             </CCol>
             <CCol sm="3">
@@ -332,16 +333,17 @@ const Insights = () => {
             </CCol>
           </CRow>
 
-          <CRow>
+          <CRow style={{ marginBottom: "20px" }}>
             <CCol lg="3">
-              <ul className='aggregates'>
-                {insightOverViewData?.map((item, index) => (<li>
-                  <span className={`dot`}><i style={{ backgroundColor: item.color }}></i></span> <span style={{ textAlign: "left" }}>{item.name}</span> <span>{item.label}</span>
-                </li>))}
-              </ul>
+
+              {insightOverViewData?.map((item, index) => ((item.label != "0") ? (<CRow>
+                <CCol lg="8"><FaCircle style={{ Color: item.color }} /><span style={{ textAlign: "left", paddingLeft: "10px" }}>{item.name}</span></CCol>
+                <CCol lg="4" style={{ textAlign: "right" }}><span>{Number(item.label).toLocaleString(navigator.language, { maximumFractionDigits: 0 })}</span></CCol>
+              </CRow>) : ''))}
+
             </CCol>
             <CCol lg="9">
-              <CRow className="insight-headers" style={{ marginBottom: 5 }}>
+              {/*<CRow className="insight-headers" style={{ marginBottom: 5 }}>
                 {insightData?.map((item, index) => (
                   <CCol lg="4">
                     <CRow>
@@ -352,15 +354,26 @@ const Insights = () => {
                   </CCol>
                 ))
                 }
-              </CRow>
+              </CRow>*/}
               <CRow style={{ marginBottom: 20 }}>
                 {insightData?.map((item, index) => (
                   <CCol lg="4">
-                    <ul className='aggregates'>
+
+                    {item?.data?.map((item, index) => (
+                      (item.label != "0") ? (<CRow>
+                        <CCol><FaCircle style={{ Color: item.color }} /><span style={{ textAlign: "left", paddingLeft: "10px" }}>{item.name}</span></CCol>
+                        <CCol style={{ textAlign: "right" }}>
+                          <span>{item.name.toLowerCase().includes('amount') ? "$" : ""}{Number(item.label).toLocaleString(navigator.language, { maximumFractionDigits: 0 })}</span>
+                        </CCol>
+                      </CRow>) : ''
+
+                    ))}
+
+                    {/*<ul className='aggregates'>
                       {item?.data?.map((item, index) => (<li>
-                        <span className={`dot`}><i style={{ backgroundColor: item.color }}></i></span> <span style={{ textAlign: "left" }}>{item.name}</span> <span>{item.label}{item.name.toLowerCase().includes('amount') ? "$" : ""}</span>
+                        <span className={`dot`}><i style={{ backgroundColor: item.color }}></i></span> <span style={{ textAlign: "left" }}>{item.name}</span> <span style={{ textAlign: "right" }}>{item.label}{item.name.toLowerCase().includes('amount') ? "$" : ""}</span>
                       </li>))}
-                    </ul>
+                      </ul>*/}
                   </CCol>
                 ))
                 }

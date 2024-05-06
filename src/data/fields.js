@@ -17,7 +17,7 @@ const fields = {
     dataIndex: 'invhdrNumberPO',
     key: 'invhdrNumberPO',
   },{
-    title: 'PO Line No',
+    title: 'PO Date',
     dataIndex: 'invpricLineNbrPo',
     key: 'invpricLineNbrPo',
   },{
@@ -68,7 +68,7 @@ const fields = {
       dataIndex: 'pohdrNumberPo',
       key: 'pohdrNumberPo',
     },{
-      title: 'PO Line No',
+      title: 'PO Date',
       dataIndex: 'pohdrDatePo',
       key: 'pohdrDatePo',
     },{
@@ -134,7 +134,7 @@ const fields = {
       key: 'PO_NUMBER',
     },
     {
-      title: 'PO Line No',
+      title: 'PO Date',
       dataIndex: 'PO_LINE_NUMBER',
       key: 'PO_LINE_NUMBER',
     },
