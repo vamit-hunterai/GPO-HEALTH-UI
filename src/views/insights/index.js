@@ -147,10 +147,7 @@ const Insights = () => {
   const [selectedCustomer, setSelectedCustomer] = useState(JSON.parse(localStorage.getItem("selectedCustomer")));
   const [customers, setCustomers] = useState([]);
 
-  useEffect(() => {
-
-
-    getInsights();
+  useEffect(() => {    
     fetchCustomers();
   }, []);
 
@@ -269,6 +266,16 @@ const Insights = () => {
     searchService.search({ type: "customers" }).then(res => {
       if (res.length != 0) {
         setCustomers(getOptions(res.map((item) => item.Customer), { label: 'PARTY_GROUP_NAME', key: 'PARTY_GROUP_KEY', value: 'PARTY_GROUP_NAME' }));
+
+
+        // Set first customer by default selected.
+        let firstCustomer = {label:res[0].Customer.PARTY_GROUP_NAME, key:res[0].Customer.PARTY_GROUP_KEY, value:res[0].Customer.PARTY_GROUP_NAME};
+        setSelectedCustomer(firstCustomer);
+        localStorage.setItem("selectedCustomerKey", firstCustomer.key);
+        localStorage.setItem("selectedCustomer", JSON.stringify(firstCustomer));
+
+        // Load Insights
+        getInsights();
       }
     })
       .catch(err => {
