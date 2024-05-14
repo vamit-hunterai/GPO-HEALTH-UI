@@ -42,6 +42,23 @@
         margin-top: 0px;
         width: 100%;
 
+        p{ span {
+            display: flex;
+            flex: 1;
+
+            &.dot {
+                flex: .2;
+
+                i {
+                    margin-top: 5px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #ccc;
+                }
+            }
+        }}
+
         li {
             list-style: none;
             display: flex;

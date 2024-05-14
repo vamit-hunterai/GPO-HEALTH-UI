@@ -363,7 +363,7 @@ const Insights = () => {
                       (item.label != "0") ? (<CRow>
                         <CCol><FaCircle style={{ Color: item.color }} /><span style={{ textAlign: "left", paddingLeft: "10px" }}>{item.name}</span></CCol>
                         <CCol style={{ textAlign: "right" }}>
-                          <span>{item.name.toLowerCase().includes('amount') ? "$" : ""}{Number(item.label).toLocaleString(navigator.language, { maximumFractionDigits: 0 })}</span>
+                          <span>{item && item.name && String(item.name).toLowerCase().includes('amount') ? "$" : ""}{Number(item.label).toLocaleString(navigator.language, { maximumFractionDigits: 0 })}</span>
                         </CCol>
                       </CRow>) : ''
 

@@ -14,38 +14,6 @@ import fields from 'src/data/fields';
 import {connect} from 'react-redux';
 import "../../antd.css";
 
-const dataSource = [
-  {
-    key: '1',
-    name: 'Mike',
-    age: 32,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-];
-
-const columns = [
-  {
-    title: 'Name',
-    dataIndex: 'name',
-    key: 'name',
-  },
-  {
-    title: 'Age',
-    dataIndex: 'age',
-    key: 'age',
-  },
-  {
-    title: 'Address',
-    dataIndex: 'address',
-    key: 'address',
-  },
-];
 
 class TableData extends Component {
   constructor(props) {
@@ -68,9 +36,9 @@ class TableData extends Component {
     this.setState({ pageOfItems: pageOfItems });
   }
 
-  handleChange(pagination, filters, sorters){
+  handleChange(pagination, filters, sorters){    
     if(this.props && this.props?.onTableChange){
-      this.props.onTableChange(pagination, filters, sorters);
+      this.props.onTableChange(pagination, filters, sorters);      
     }
   }
 

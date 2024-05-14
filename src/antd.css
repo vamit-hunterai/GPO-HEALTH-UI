@@ -492,12 +492,12 @@ mark {
 .anticon-reload:before {
   content: "\E616";
 }
-.anticon-double-right:before {
+/*.anticon-double-right:before {
   content: "\E617";
-}
-.anticon-double-left:before {
+}*/
+/*.anticon-double-left:before {
   content: "\E618";
-}
+}*/
 .anticon-arrow-down:before {
   content: "\E619";
 }
@@ -15391,7 +15391,7 @@ textarea.ant-input-number {
 }
 .ant-pagination-jump-prev:after,
 .ant-pagination-jump-next:after {
-  content: "\2022\2022\2022";
+  /*content: "\2022\2022\2022";*/
   display: block;
   letter-spacing: 2px;
   color: rgba(0, 0, 0, 0.25);
@@ -15417,14 +15417,14 @@ textarea.ant-input-number {
 :root .ant-pagination-jump-next:hover:after {
   font-size: 12px;
 }
-.ant-pagination-jump-prev:focus:after,
+/*.ant-pagination-jump-prev:focus:after,
 .ant-pagination-jump-prev:hover:after {
   content: "\E620\E620";
 }
 .ant-pagination-jump-next:focus:after,
 .ant-pagination-jump-next:hover:after {
   content: "\E61F\E61F";
-}
+}*/
 .ant-pagination-prev,
 .ant-pagination-jump-prev,
 .ant-pagination-jump-next {
@@ -15517,7 +15517,7 @@ textarea.ant-input-number {
   margin: 0 10px 0 5px;
 }
 .ant-pagination-options {
-  display: inline-block;
+  display: none;
   vertical-align: middle;
   margin-left: 16px;
 }

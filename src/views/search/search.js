@@ -116,7 +116,7 @@ componentDidMount(){
   // console.log(this.props?.segment)
   if(this.props?.segment){
     this.state.segment = this.props?.segment;
-    this.state.search = {};
+    //this.state.search = {};
     this.handleSubmit(null);
   }
 }
@@ -178,6 +178,9 @@ search(targetKey, obj){
       this.state.count = count.recordset[0].total;
       // console.log(count[0].count)
       this.setState({count:count.recordset[0].total});
+     }else if(count){
+      this.state.count = count.count;
+      this.setState({count:count.count});
      }
      
 
@@ -277,9 +280,13 @@ onChange(e) {
 }
 
 handleSubmit(e){
-  if(e)e.preventDefault();
-  this.setState({loading:true});
   var tmpData = commonService.clone(this.state.search);
+  if(e){
+    e.preventDefault();
+    tmpData.page=1;
+  }
+  this.setState({loading:true});
+  
   for (let [key, value] of Object.entries(tmpData)){
     if(!tmpData[key])
         delete tmpData[key];
@@ -333,7 +340,8 @@ supplierSelect(obj){
 }
 
 render() {
-  const {roleSelectedOption, supplierSelectedOption, loading, list, count, page, segment} = this.state;
+  const {roleSelectedOption, supplierSelectedOption, loading, list, count, segment} = this.state;
+  const page = this.state.search.page;
   //console.log(this.props.searchList);
   return (
     <>
