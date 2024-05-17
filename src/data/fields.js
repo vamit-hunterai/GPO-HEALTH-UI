@@ -32,6 +32,7 @@ const fields = {
     title: 'Description',
     dataIndex: 'invpriccDescription',
     key: 'invpriccDescription',
+    width:'35%'
   },{
     title: 'Base Product',
     dataIndex: 'invpricSegmentLevel4',
@@ -40,22 +41,29 @@ const fields = {
     title: 'Qty',
     dataIndex: 'invpricQtyDerived',
     key: 'invpricQtyDerived',
+    align: 'right',
+    render: (text) => Number(text).toLocaleString(navigator.language, { maximumFractionDigits: 0 })
   },{
     title: 'Unit Price',
     dataIndex: 'invpricRate',
     key: 'invpricRate',
+    align: 'right',
+    render: (text) => Number(text).toLocaleString(navigator.language, { maximumFractionDigits: 2 })
   },{
     title: 'Line Amount',
     dataIndex: 'invpricLineAmount',
     key: 'invpricLineAmount',
+    align: 'right',
+    render: (text) => Number(text).toLocaleString(navigator.language, { maximumFractionDigits: 2 })
   },{
     title: 'Actions',
     dataIndex: 'invoice_pdf_url',
     key: 'invoice_pdf_url',
     render:(rec, obj)=>{
-       return <button disabled={!rec?true:false} onClick={()=>{
+       return 
+        !rec && <button disabled={!rec?true:false} onClick={()=>{
         downloadURI(rec, obj.Filename)
-       }}>Open</button> 
+       }}>Open</button>
     }
   },],
   "po-detailsItems":[
@@ -75,18 +83,25 @@ const fields = {
       title: 'Description',
       dataIndex: 'popricDescription',
       key: 'popricDescription',
+      width:'35%'
     },{
       title: 'Qty',
       dataIndex: 'popricQty',
       key: 'popricQty',
-    },,{
+      align: 'right',
+      render: (text) => Number(text).toLocaleString(navigator.language, { maximumFractionDigits: 0 })
+    },{
       title: 'Unit Price',
       dataIndex: 'popricRate',
       key: 'popricRate',
-    },,{
+      align: 'right',
+      render: (text) => Number(text).toLocaleString(navigator.language, { maximumFractionDigits: 2 })
+    },{
       title: 'Line Amount',
       dataIndex: 'popricLineAmount',
       key: 'popricLineAmount',
+      align: 'right',
+      render: (text) => Number(text).toLocaleString(navigator.language, { maximumFractionDigits: 2 })
     }
   ],
 
@@ -125,6 +140,8 @@ const fields = {
       title: 'Line Amount',
       dataIndex: 'HCO_DISTRBTN_AMT',
       key: 'HCO_DISTRBTN_AMT',
+      align: 'right',
+      render: (text) => Number(text).toLocaleString(navigator.language, { maximumFractionDigits: 2 })
     }   
   ],
   "po-invoicesItems":[

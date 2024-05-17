@@ -60,7 +60,7 @@ const dataMap = {
 
 const dataAggregates = {
   PO: [{
-    name: "Total PO Amount",
+    name: "Total Amount",
     aggregateField: 'Total_txn_amt'
   },
   {
@@ -76,7 +76,7 @@ const dataAggregates = {
     aggregateField: 'Uniq_PO'
   }],
   Invoice: [{
-    name: "Total Invoice Amount",
+    name: "Total Amount",
     aggregateField: 'Total_txn_amt'
   },
   {
@@ -96,7 +96,7 @@ const dataAggregates = {
   }
   ],
   AP: [{
-    name: "Total Invoice Amount",
+    name: "Total Amount",
     aggregateField: 'Total_txn_amt'
   },
   {
