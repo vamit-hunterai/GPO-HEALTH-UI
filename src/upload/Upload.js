@@ -36,7 +36,7 @@ class Upload extends Component {
       fileList: [],
       baseList: [],
       folders:[],
-      selectedFoder:{},
+      selectedFolder:{},
       uploadedFiles:[],
       uploading: true,
       loading: false,
@@ -63,16 +63,16 @@ class Upload extends Component {
   
 handleChange (option,obj){
   if(option != null){
-    this.setState({selectedFoder:option});
+    this.setState({selectedFolder:option});
     this.setState({uploading:false});
   }else{
-    this.setState({selectedFoder:{}});
+    this.setState({selectedFolder:{}});
     this.setState({uploading:true});
   }
   
 }
 
-  getCustomerFilders(){
+  getCustomerFolders(){
 
     let selectedCustomer = localStorage.getItem('selectedCustomer');
 
@@ -82,7 +82,12 @@ handleChange (option,obj){
         res.forEach(element => {
           _options.push({label: element.S3Folder.folder_name, value: element.S3Folder.folder_name});
         });
+
         this.setState({}, () => this.setState({ folders:_options}));
+        
+        if(_options && _options.length != 0)
+          this.setState({}, () => this.setState({selectedFolder:_options[0],uploading:false}));
+        
       }      
     })
     .catch(err => {
@@ -91,7 +96,7 @@ handleChange (option,obj){
 
   componentDidMount() {
     this.loadFiles();// load on component mont
-    this.getCustomerFilders();
+    this.getCustomerFolders();
     //this.timer = setInterval(()=> this.loadFiles(), config.filesAutoRefresh); //load for each interval
   }
 
@@ -205,7 +210,7 @@ handleChange (option,obj){
    * To attach multiple files to send
   */
   async uploadFiles() {
-    if(!this.state.selectedFoder.value){
+    if(!this.state.selectedFolder.value){
       toast.error("Select customer folder");
       return;
     }
@@ -283,7 +288,7 @@ handleChange (option,obj){
         //req.open("POST", ` http://18.207.124.230:3000/api/v1/file/multi-upload`);
         req.setRequestHeader("x-access-token", this.state.user.token); //add json auth token
         formData.append("username", this.state.user.username);
-        formData.append("folder", this.state.selectedFoder.value);
+        formData.append("folder", this.state.selectedFolder.value);
          req.send(formData);
       } catch (e) {
         console.log(e)
@@ -338,7 +343,7 @@ handleChange (option,obj){
   }
 
   render() {
-    const { collapsed, fileList, loading } = this.state;
+    const { collapsed, fileList, loading  } = this.state;
     //console.log(this.state.uploadProgress)
     return (
       <div className="Upload" disabled>
@@ -380,7 +385,7 @@ handleChange (option,obj){
                     placeholder="Select folder for uploading files ..."
                     isClearable={true}
                     components={animatedComponents}
-                    value={this.selectedFoder}
+                    value={this.state.selectedFolder}
                     onChange={this.handleChange}
                     className={"folder-selection"}
                     options={this.state.folders}/>

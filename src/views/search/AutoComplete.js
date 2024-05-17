@@ -31,7 +31,7 @@ export  default  function  Autocomplete(props) {
     }
 	return (
         <div className='auto-complete'>
-        <input  onChange={(e) => onSearchChange(e.target.value)} className={"form-control"} value={value} onBlur={(e) => { if(!mouseHover) setShowResults(false)}} />
+            <input  onChange={(e) => onSearchChange(e.target.value)} className={"form-control"} value={value} onBlur={(e) => { if(!mouseHover) setShowResults(false)}} />
             {showResults &&
                 <ul className='list' onMouseEnter={ (e) => {setMouseHover(true); setShowResults(true)}} onMouseLeave={ (e) => {setMouseHover(false); setShowResults(false)}} > 
                     {data.map((item)=><li onClick={()=>onSelect(item)}>{item.VENDOR_NAME}</li>)}
