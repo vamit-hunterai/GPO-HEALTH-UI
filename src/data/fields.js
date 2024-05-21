@@ -230,6 +230,11 @@ const fields = {
       filter: false
     }
   ],
+  customerFileListFields : [
+    { key: 'name', label:'File Name' },
+    { key: 'LastModified', label:'Upload Date' },
+    { key: 'download_btn', label: '', sorter: false, filter: false }
+  ],
   _invoicesItems:[
     { key: 'NameSupplier',label:'Vendor' },
     { key: 'NumberSOW',label:'SOW' },

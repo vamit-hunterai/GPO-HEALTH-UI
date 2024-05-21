@@ -13,6 +13,8 @@ const Search = React.lazy(() => import('./views/search/search'));
 const Upload = React.lazy(() => import('./upload/Upload'));
 const SearchClassification = React.lazy(() => import('./views/search/SearchClassification'));
 const SearchSow = React.lazy(() => import('./views/search/SearchSow'));
+const Output = React.lazy(() => import('./views/output/Output'));
+
 //const Page401 = React.lazy(() => import("./views/pages/errors/Page404"));
 
 const routes = [
@@ -20,6 +22,7 @@ const routes = [
   { path: '/insights/:segment', exact: true, name: 'Insights',component: Insights },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/upload', name: 'Upload', component: Upload },
+  { path: '/download', name: 'Download', component: Output },
   { path: '/search/:segment', name: '', component: Search },
   { path: '/search', name: 'Search', component: Search },
   // { path: '/search/:fileId', name: 'File', exact: true, component: Search },

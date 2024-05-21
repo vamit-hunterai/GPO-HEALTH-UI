@@ -27,6 +27,12 @@ const _nav = [
     to: '/upload',
     icon: 'cil-cloud-upload',
   },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Download',
+    to: '/download',
+    icon: 'cil-cloud-download',
+  },
   /*{
     _tag: 'CSidebarNavDropdown',
     name: 'Search',
